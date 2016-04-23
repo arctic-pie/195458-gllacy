@@ -42,7 +42,7 @@
         </nav>
         <div class="user-block">
           <div class="search">
-            <a class="user-block-btn user-block-btn-search" href="#">Поиск</a>
+            <a class="user-block-btn user-block-btn-search" href="#">Поиск</a><!--Кирилл, решила порадовать тебя комментами, а себя странными длинными классами..-->
             <div>
               <form action="#" method="post">
                 <input type="search" name="search" placeholder="Что ищем?">
@@ -64,14 +64,67 @@
           <div class="bascket">
             <a class="user-block-btn user-block-btn-bascket" href="#">Пусто</a>
           </div>
-          <div class="info">
+          <div class="info"><!--Я так поняла, что это часть header, т.к. оно и в каталоге на том же месте.-->
             <span class="info-time">С 10 до 20, ежедневно</span><br>
             <span class="info-number">8 812 450-25-25</span>
           </div>
         </div>   
       </div>        
     </header>
-    <main class="container">
+    <main class="container"><!--Пока верстала header и footer очень хотелось мороженного.) Когда дело до слайдера дошло, перехотелось.:)))-->
+    
+      <div class="slider">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">      
+        <input type="radio" name="slide" id="slide3">
+        <div class="slides">
+          <div class="hidden">
+            <div class="inner">
+              <div class="page">
+                <img width="100%" src="http://placehold.it/1200x49/88cc00" alt="Background">
+                <div class="description">
+                  <img src="http://placehold.it/146x49/88cc00" alt="shining">
+                  <img src="http://placehold.it/146x49/77dd55" alt="right-ice-cream">
+                  <img src="http://placehold.it/146x49/55cc00" alt="left-ice-cream">
+                    <div class="description-text">   
+                      <p>Крем-брюле и пломбир с малиновым джемом</p>
+                      <a class="big-btn" href="#">Давайте оба!</a>
+                    </div>
+                </div>
+              </div>
+              <div class="page">
+                <img width="100%" src="http://placehold.it/1200x49/00ddee" alt="Background">
+                <div class="description">
+                  <img src="http://placehold.it/146x49/88cc00" alt="shining">
+                  <img src="http://placehold.it/146x49/77dd55" alt="right-ice-cream">
+                  <img src="http://placehold.it/146x49/55cc00" alt="left-ice-cream">
+                    <div class="description-text">   
+                      <p>Шоколадный пломбир и лимонный сорбет</p>
+                      <a class="big-btn" href="#">Давайте оба!</a>
+                    </div>
+                </div>
+              </div>
+              <div class="page">
+                <img width="100%" src="http://placehold.it/1200x49/11cc88" alt="Background">
+                <div class="description">
+                  <img src="http://placehold.it/146x49/88cc00" alt="shining">
+                  <img src="http://placehold.it/146x49/77dd55" alt="right-ice-cream">
+                  <img src="http://placehold.it/146x49/55cc00" alt="left-ice-cream">
+                    <div class="description-text">   
+                      <p>Пломбир с помадкой и клубничный щербет</p>
+                      <a class="big-btn" href="#">Давайте оба!</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+            <label for="slide1">•</label>
+            <label for="slide2">•</label>
+            <label for="slide3">•</label>
+        </div>
+    </div>
     
     </main>
     <footer class="main-footer">
@@ -83,7 +136,7 @@
             <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="footer-info">
-          <table>
+          <table> <!--Нужна тут вообще эта таблица? С ней вроде как выровнять текст легче будет.-->
             <tr>
               <th rowspan="2">
                 <img width="15" height="13" src="http://placehold.it/15x13" alt="Heart">
