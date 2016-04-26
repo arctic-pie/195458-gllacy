@@ -10,7 +10,7 @@
         <nav class="main-navigation">
           <ul>
             <li>
-              <a href="index.html"><img width="154" height="64" src="http://placehold.it/154x64" alt="GllacyShop"></a>
+              <a href="index.html"><img width="154" height="64" src="images/Logo_gllacyshop.png" alt="GllacyShop"></a>
             </li>
             <li>
               <a href="#">Каталог</a>
@@ -19,7 +19,7 @@
                   <a href="/">Новинки</a>
                 </li>
                 <li>
-                  <a href="/">Сливочное</a>
+                  <a href="catalog.html">Сливочное</a>
                 </li>
                 <li>
                   <a href="/">Щербеты</a>
@@ -43,7 +43,7 @@
         <div class="user-block">
           <div class="search">
             <a class="user-block-btn user-block-btn-search" href="#">Поиск</a>
-            <div>
+            <div class="hover">
               <form action="#" method="post">
                 <input type="search" name="search" placeholder="Что ищем?">
               </form>
@@ -51,18 +51,48 @@
           </div>     
           <div class="enter">
             <a class="user-block-btn user-block-btn-enter" href="#">Вход</a>
-            <div>
+            <div class="hover">
               <form action="#" method="post">
                 <input type="email" name="email" placeholder="Электронная почта">
                 <input type="password" name="password" placeholder="Пароль">
                 <button class="btn" type="submit">Войти</button>
               </form>
-              <a href="#">Звбыли пароль?</a>
+              <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
             </div>
           </div>
           <div class="bascket">
             <a class="user-block-btn user-block-btn-bascket" href="#">Пусто</a>
+            <div class="full-bascket hover">
+              <table>
+				<tr>
+				  <td>
+					<form action="#" method="post">
+					  <button class="delete-btn"></button>
+					</form>
+				  </td>
+				  <td><img src="http://placehold.it/33x33"></td>
+				  <td>Пломбир с апельсиновым джемом</td>
+				  <td>1,5 кг x 200 руб.</td>
+				  <td>300 руб.</td>
+				</tr>
+				<tr>
+				  <td>
+					<form action="#" method="post">
+					  <button class="delete-btn"></button>
+					</form>
+				  </td>
+				  <td><img src="http://placehold.it/33x33"></td>
+				  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+				  <td>1,5 кг x 300 руб.</td>
+				  <td>450 руб.</td>
+				</tr>
+				<tr>
+				  <td colspan="4">Итого: 750 руб.</td>
+				</tr>
+			  </table>
+              <a href="#" class="btn">Оформить заказ</a>
+			</div>
           </div>
           <div class="info">
             <span class="info-time">С 10 до 20, ежедневно</span><br>
@@ -85,47 +115,164 @@
             </li>
         </ul>       
       </nav>
-      <section class="content">
-        <h2>Сливочное мороженое</h2>
-        <aside class="filter">
-          <form action="#" method="post">
-            <fieldset>
-              <legend>Сортировка:</legend>
-              <select name="sorting">
-                <option value="по популярности">по популярности</option>
-                <option value="по цене">по цене</option> 
-              </select>
-            </fieldset>
-            <fieldset>  
+      <h2>Сливочное мороженое</h2>
+      <aside class="filter">
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Сортировка:</legend>
+            <select name="sorting">
+              <option value="по популярности">по популярности</option>
+              <option value="сначала недорогие">сначала недорогие</option> 
+              <option value="сначала дорогие">сначала дорогие</option> 
+              <option value="по жирности">по жирности</option> 
+            </select>
+          </fieldset>
+          <fieldset>  
                         <!--Как сделать двойной ползунок без jQuery UI Slider: 
                             http://ionden.com/a/plugins/ion.rangeSlider/
                             https://habrahabr.ru/post/247935/-->
-              <legend>Цена:</legend> 100 руб. – 500 руб.
-              <input type="range" name="price" min=0 max=700 value=100>
-            </fieldset>
-            <fieldset>
-              <legend>Жирность:</legend>
-              <label><input type="radio" name="fat" value="0%до 10%">0%до 10%</label>
-              <label><input type="radio" name="fat" value="до 10%" checked>до 10%</label>
-              <label><input type="radio" name="fat" value="до 30%">до 30%</label>
-              <label><input type="radio" name="fat" value="выше 30%">выше 30%</label>
-            </fieldset>
-            <fieldset> 
-              <legend>Наполнители:</legend>
-              <label><input type="checkbox" name="stuff" value="шоколадные" checked>шоколадные</label>
-              <label><input type="checkbox" name="stuff" value="сахарные присыпки" checked>сахарные присыпки</label>
-              <label><input type="checkbox" name="stuff" value="фрукты">фрукты</label>
-              <label><input type="checkbox" name="stuff" value="сиропы">сиропы</label>
-              <label><input type="checkbox" name="stuff" value="джемы">джемы</label>
-            </fieldset>    
-              <button type="submit" value="Применить">Применить</button>
-           
-
-          </form>
-        </aside>
-      </section>
-    
-    
+            <legend>Цена:</legend> 100 руб. – 500 руб.
+            <input type="range" name="price" min=0 max=700 value=100>
+          </fieldset>
+          <fieldset>
+            <legend>Жирность:</legend>
+            <label><input type="radio" name="fat" value="0%до 10%">0%до 10%</label>
+            <label><input type="radio" name="fat" value="до 10%" checked>до 10%</label>
+            <label><input type="radio" name="fat" value="до 30%">до 30%</label>
+            <label><input type="radio" name="fat" value="выше 30%">выше 30%</label>
+          </fieldset>
+          <fieldset> 
+            <legend>Наполнители:</legend>
+            <label><input type="checkbox" name="stuff" value="шоколадные" checked>шоколадные</label>
+            <label><input type="checkbox" name="stuff" value="сахарные присыпки" checked>сахарные присыпки</label>
+            <label><input type="checkbox" name="stuff" value="фрукты">фрукты</label>
+            <label><input type="checkbox" name="stuff" value="сиропы">сиропы</label>
+            <label><input type="checkbox" name="stuff" value="джемы">джемы</label>
+          </fieldset>    
+            <button type="submit" value="Применить">Применить</button>
+        </form>
+      </aside>
+      <section class="catalog">
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          <span>310<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/2.png" alt="Сливочно-кофейное с кусочками шоколада">
+          <span>380<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочно-кофейное с кусочками шоколада</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+          <span>355<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/4.png" alt="Сливочное крем-брюле с карамельной подливкой">
+          <span>415<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочное крем-брюле с карамельной подливкой</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/5.png" alt="Сливочное с брусничным джемом">
+          <span>325<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочное с брусничным джемом</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/6.png" alt="Сливочно-черничное с цельными ягодами черники">
+          <span>410<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочно-черничное с цельными ягодами черники</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/7.png" alt="Сливочно-лимонное с карамельной присыпкой">
+          <span>375<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочно-лимонное с карамельной присыпкой</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/8.png" alt="Сливочное с шоколадной стружкой">
+          <span>320<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочное с шоколадной стружкой</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/9.png" alt="Сливочно-ванильное с кусочками шоколада">
+          <span>440<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочно-ванильное с кусочками шоколада</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div> 
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/10.png" alt="Сливочноe с ментоловым сиропом">
+          <span>435<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочноe с ментоловым сиропом</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div> 
+        <div class="hover">
+          <div class="catalog-item">
+            <img width="267" height="267" src="images/11.png" alt="Сливочное с кусочками черного шоколада">
+            <span>355<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+            <p>
+              <a href="/">Сливочное с кусочками черного шоколада</a>
+            </p>
+          </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+        <div class="hover">
+          <div class="catalog-item">
+          <img width="267" height="267" src="images/12.png" alt="Сливочное с мятным сиропом">
+          <span>420<img width="27" height="32" src="images/Rub.png" alt="">/кг</span>
+          <p><a href="/">Сливочное с мятным сиропом</a></p>
+        </div>
+          <button class="btn" type="submit">Быстрый просмотр</button>
+        </div>
+      </section>     
+      <section class="pagination">
+       <ul>
+        <li>
+          <button class="pagination-btn pagination-1">1</button>
+        </li>
+        <li>
+          <button class="pagination-btn pagination-2">2</button>
+        </li>
+        <li>
+          <button class="pagination-btn pagination-3">3</button>
+        </li>
+        <li>
+          <button class="pagination-btn pagination-4">4</button>
+        </li>
+        <li>
+          <button class="pagination-btn pagination-5">5</button>
+        </li>
+      </ul>
+      </section>    
     </main>
     <footer class="main-footer">
       <div class="container">
@@ -139,7 +286,7 @@
           <table>
             <tr>
               <th rowspan="2">
-                <img width="15" height="13" src="http://placehold.it/15x13" alt="Heart">
+                <img width="15" height="13" src="images/Heart.png" alt="Heart">
               </th>
               <th>
                 <a href="#"><b>Для поставщиков</b></a>
@@ -159,7 +306,7 @@
           </table>
         </section>
         <section class="footer-copyright">
-          <img width="108" height="38" src="http://placehold.it/108x38" alt="html academy"><br>
+          <img width="108" height="38" src="images/Logo_htmlacademy.png" alt="html academy"><br>
           <span>
             Сделано в <a class="btn" href="https://htmlacademy.ru">HTML Academy</a> © 2016
           </span>
