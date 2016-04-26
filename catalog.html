@@ -10,7 +10,7 @@
         <nav class="main-navigation">
           <ul>
             <li>
-              <img width="154" height="64" src="http://placehold.it/154x64" alt="GllacyShop">
+              <a href="index.html"><img width="154" height="64" src="http://placehold.it/154x64" alt="GllacyShop"></a>
             </li>
             <li>
               <a href="#">Каталог</a>
@@ -72,6 +72,59 @@
       </div>        
     </header>
     <main class="container">
+      <nav class="breadcrumbs">
+        <ul>
+            <li>
+                <a href="index.html">Главная</a>  »
+            </li>
+            <li>
+                <a href="#">Каталог</a>  »
+            </li>
+            <li>
+                Сливочное
+            </li>
+        </ul>       
+      </nav>
+      <section class="content">
+        <h2>Сливочное мороженое</h2>
+        <aside class="filter">
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Сортировка:</legend>
+              <select name="sorting">
+                <option value="по популярности">по популярности</option>
+                <option value="по цене">по цене</option> 
+              </select>
+            </fieldset>
+            <fieldset>  
+                        <!--Как сделать двойной ползунок без jQuery UI Slider: 
+                            http://ionden.com/a/plugins/ion.rangeSlider/
+                            https://habrahabr.ru/post/247935/-->
+              <legend>Цена:</legend> 100 руб. – 500 руб.
+              <input type="range" name="price" min=0 max=700 value=100>
+            </fieldset>
+            <fieldset>
+              <legend>Жирность:</legend>
+              <label><input type="radio" name="fat" value="0%до 10%">0%до 10%</label>
+              <label><input type="radio" name="fat" value="до 10%" checked>до 10%</label>
+              <label><input type="radio" name="fat" value="до 30%">до 30%</label>
+              <label><input type="radio" name="fat" value="выше 30%">выше 30%</label>
+            </fieldset>
+            <fieldset> 
+              <legend>Наполнители:</legend>
+              <label><input type="checkbox" name="stuff" value="шоколадные" checked>шоколадные</label>
+              <label><input type="checkbox" name="stuff" value="сахарные присыпки" checked>сахарные присыпки</label>
+              <label><input type="checkbox" name="stuff" value="фрукты">фрукты</label>
+              <label><input type="checkbox" name="stuff" value="сиропы">сиропы</label>
+              <label><input type="checkbox" name="stuff" value="джемы">джемы</label>
+            </fieldset>    
+              <button type="submit" value="Применить">Применить</button>
+           
+
+          </form>
+        </aside>
+      </section>
+    
     
     </main>
     <footer class="main-footer">
