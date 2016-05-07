@@ -391,12 +391,13 @@ a:hover {
 
 /* Почему не отображается bg-img во всех браузерах кроме хрома???!!!>_< */
 .promo-banners .promo1 {
-    background-image: url(/img/Background_promo_1.png);
-    background-color: #bf0937;
+    background: url(/img/Background_promo_1.png) no-repeat #bf0937;
+    background-position: right top;
     border-radius: 15px;
 }
 .promo-banners .promo2 {
     background: url(/img/Background_promo_2.png) no-repeat #522e19;
+    background-position: right top;
     border-radius: 15px;
 }
 .about {
@@ -405,10 +406,9 @@ a:hover {
 }
 .about2 .blog {
     background: url(/img/Background_about2_blog.png) no-repeat white;
+    background-position: right top;
     border-radius: 15px;
 }
-/* Как сделать так, чтобы фон контейнера при сжатии уезжал в обратную сторону? */
-
 .about2 .subscription {
     background-image: url(/img/Background_about2_subscription.png);
     background-color: white;
