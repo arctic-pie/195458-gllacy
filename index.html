@@ -3,135 +3,124 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <div class="container">
-        <nav class="main-navigation">
-          <div class="main-logo">
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">      
+    <input type="radio" name="slide" id="slide3">
+    <div class="site-wrapper">
+      <div class="content-wrapper">
+      
+        <header class="main-header">
+          <div class="container">
+            <nav class="main-navigation">
+              <div class="main-logo">
             <img width="154" height="64" src="img/Logo_Gllacy.svg" alt="GllacyShop">
-          </div>
-          <ul>
-            <li class="main-menu">
-              <a href="#">Каталог</a>
-              <ul class="dropdown">
-                <li>
-                  <a href="/">Новинки</a>
+              </div>
+              <ul>
+                <li class="main-menu">
+                  <a href="#">Каталог</a>
+                  <ul class="dropdown">
+                    <li>
+                      <a href="/">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="catalog.html">Сливочное</a>
+                    </li>
+                    <li>
+                      <a href="/">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="/">Фруктовый лед</a>
+                    </li>
+                    <li>
+                      <a href="/">Мелорин</a>
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  <a href="catalog.html">Сливочное</a>
+                <li class="main-menu">
+                  <a href="#">Доставка и оплата</a>
                 </li>
-                <li>
-                  <a href="/">Щербеты</a>
-                </li>
-                <li>
-                  <a href="/">Фруктовый лед</a>
-                </li>
-                <li>
-                  <a href="/">Мелорин</a>
+                <li class="main-menu">
+                  <a href="#">О Компании</a>
                 </li>
               </ul>
-            </li>
-            <li class="main-menu">
-              <a href="#">Доставка и оплата</a>
-            </li>
-            <li class="main-menu">
-              <a href="#">О Компании</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user-block">
-          <div class="search">
-            <a class="user-block-btn user-block-btn-search" href="#">Поиск</a>
-            <div class="hover">
-              <form action="#" method="post">
-                <input type="search" name="search" placeholder="Что ищем?">
-              </form>
-            </div>
-          </div>     
-          <div class="enter">
-            <a class="user-block-btn user-block-btn-enter" href="#">Вход</a>
-            <div class="hover">
-              <form action="#" method="post">
-                <input type="email" name="email" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
-                <button class="btn" type="submit">Войти</button>
-              </form>
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
-            </div>
-          </div>
-          <div class="bascket">
-            <a class="user-block-btn user-block-btn-bascket" href="#">Пусто</a>
-            <div class="full-bascket hover">
-              <table>
-				<tr>
-				  <td>
-					<a class="delete-btn">x</a>
-				  </td>
-				  <td><img src="http://placehold.it/33x33" alt=""></td>
-				  <td>Пломбир с апельсиновым джемом</td>
-				  <td>1,5 кг x 200 руб.</td>
-				  <td>300 руб.</td>
-				</tr>
-				<tr>
-				  <td>
-					<a class="delete-btn">x</a>
-				  </td>
-				  <td><img src="http://placehold.it/33x33" alt=""></td>
-				  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+            </nav>
+            <div class="user-block">
+              <div class="search">
+                <a class="user-block-btn user-block-btn-search" href="#">Поиск</a>
+                <div class="hover">
+                  <form action="#" method="post">
+                    <input type="search" name="search" placeholder="Что ищем?">
+                  </form>
+                </div>
+              </div>     
+              <div class="enter">
+                <a class="user-block-btn user-block-btn-enter" href="#">Вход</a>
+                <div class="hover">
+                  <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Электронная почта">
+                    <input type="password" name="password" placeholder="Пароль">
+                    <button class="btn" type="submit">Войти</button>
+                  </form>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
+              </div>
+              <div class="bascket">
+                <a class="user-block-btn user-block-btn-bascket" href="#">Пусто</a>
+                <div class="full-bascket hover">
+                  <table>
+				    <tr>
+				      <td>
+					    <a class="delete-btn">x</a>
+				      </td>
+				      <td><img src="http://placehold.it/33x33" alt=""></td>
+				      <td>Пломбир с апельсиновым джемом</td>
+				      <td>1,5 кг x 200 руб.</td>
+				      <td>300 руб.</td>
+				    </tr>
+				    <tr>
+				      <td>
+					    <a class="delete-btn">x</a>
+				      </td>
+				      <td><img src="http://placehold.it/33x33" alt=""></td>
+				      <td>Клубничный пломбир с присыпкой из белого шоколада</td>
 				  <td>1,5 кг x 300 руб.</td>
-				  <td>450 руб.</td>
-				</tr>
-				<tr>
-				  <td colspan="4">Итого: 750 руб.</td>
-				</tr>
-			  </table>
-              <a href="#" class="btn">Оформить заказ</a>
-			</div>
-          </div>
-          <div class="user-block-info">
-            <span class="info-time">С 10 до 20, ежедневно</span><br>
-            <span class="info-number">8 812 450-25-25</span>
-          </div>
-        </div>  
-      </div>        
-    </header>
-    <main class="container">
-    
+				      <td>450 руб.</td>
+				    </tr>
+				    <tr>
+				      <td colspan="4">Итого: 750 руб.</td>
+				    </tr>
+			      </table>
+                  <a href="#" class="btn">Оформить заказ</a>
+			    </div>
+              </div>
+              <div class="user-block-info">
+                <span class="info-time">С 10 до 20, ежедневно    </span><br>
+                <span class="info-number">8 812 450-25-25</span>
+              </div>
+            </div>  
+          </div>        
+        </header>
+                    <!-- Слайдер - начало -->  
       <div class="slider">
-        <input type="radio" name="slide" id="slide1" checked>
-        <input type="radio" name="slide" id="slide2">      
-        <input type="radio" name="slide" id="slide3">
-        <div class="slides">
-          <div class="hidden">
-            <div class="inner">
-              <div class="page">
-                <img src="img/Main_slider_1.png" width="1045" height="881" alt="Background">
-                <div class="description">
+                <div class="slide" id="slide-title1">
                   <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-                  <a class="big-btn" href="#">Давайте оба!</a>
+                  <a class="slide-btn" href="#">Давайте оба!</a>
                 </div>
-              </div>
-              <div class="page">
-                <img src="img/Main_slider_2.png" width="1065" height="859" alt="Background"> <!--1065x859-->
-                <div class="description">
+            
+                <div class="slide" id="slide-title2">
                   <h1>Шоколадный пломбир и лимонный сорбет</h1>
-                  <a class="big-btn" href="#">Давайте оба!</a>
+                  <a class="slide-btn" href="#">Давайте оба!</a>
                 </div>
-              </div>
-              <div class="page">
-                <img src="img/Main_slider_3.png" width="1079" height="854" alt="Background"> <!--1079x854-->
-                <div class="description">   
+                <div class="slide" id="slide-title3">   
                   <h1>Пломбир с помадкой и клубничный щербет</h1>
-                  <a class="big-btn" href="#">Давайте оба!</a>
+                  <a class="slide-btn" href="#">Давайте оба!</a>
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="slider-controls">
             <label for="slide1"></label>
@@ -139,7 +128,8 @@
             <label for="slide3"></label>
         </div>
       </div>
-      
+                    <!-- Слайдер - конец --> 
+    <main class="container">
       <section class="promo-banners">
         <div class="promo1">
           <h2>Малинка даром!</h2>
@@ -215,17 +205,17 @@
       </section>
       <section class="map">
          <div class="pin"></div>
-          <div class="contacts">
-              <p>
-                  <span class="text">Адрес главного офиса и офлайн магазина:</span>
-                  <span class="bold-text">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-              </p>
-              <p>
-                  <span class="text">Для заказов по телефону:</span>
-                  <span class="bold-text">8 812 450-25-25</span>
+         <div class="contacts">
+            <p>
+              <span class="text">Адрес главного офиса и офлайн магазина:</span>
+              <span class="bold-text">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+            </p>
+            <p>
+              <span class="text">Для заказов по телефону:</span>
+              <span class="bold-text">8 812 450-25-25</span>
                   <span class="text">(с 10 до 20 ежедневно)</span>
-              </p>
-              <button class="btn" type="submit">Форма обратной связи</button>
+            </p>
+            <button class="btn" type="submit">Форма обратной связи</button>
           </div>
           <div class="feetback hover">
             <form action="#" method="post">
@@ -246,7 +236,7 @@
           <a class="social-btn social-btn-twit" href="#">Твиттер</a>
           <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
           <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="footer-info"> 
           <ul class="footer-info-columns footer-info-columns1">
@@ -274,5 +264,8 @@
         </section>
       </div>
     </footer>
+     
+      </div>
+    </div>
   </body>
 </html>
