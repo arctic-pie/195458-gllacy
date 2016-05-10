@@ -95,12 +95,12 @@
           </div>
           <div class="user-block-info">
             <span class="info-time">С 10 до 20, ежедневно</span><br>
-            <span class="info-number">8 812 450-25-25</span> <!-- Выпадение юзер-блока при минимальной ширине страницы (с футером ок) и перенос строки в номере телефона в MF http://savepic.ru/9640435.jpg -->
+            <span class="info-number">8 812 450-25-25</span> 
           </div>
         </div>   
       </div>        
     </header>
-    <main class="container">
+    <main>
       <nav class="breadcrumbs">
         <ul>
             <li>
@@ -114,7 +114,8 @@
             </li>
         </ul>       
       </nav>
-      <h2>Сливочное мороженое</h2> <!-- Не получается уменьшить верхний и нижний отступы -->
+      <div class="positioner">
+      <h2>Сливочное мороженое</h2> 
       <aside class="filter">
         <form action="#" method="post">
           <fieldset>
@@ -151,122 +152,143 @@
             <button type="submit" value="Применить">Применить</button>
         </form>
       </aside>
+      </div>
       
       <section class="catalog">
 <!-- 
-     1. Добавлены блоки для строк каталога, т.к. flex-wrap: wrap; в контейнере не даёт уменьшаться флекс-элементам.
-     2. Как сделать изменение маргинов между элементами .catalog-item? justify-content: space-between; и margin: auto; не работают.
-     
-     в IE11 - не меняется размер элементов каталога
-     http://savepic.ru/9677299.jpg
-     ??? https://github.com/philipwalton/flexbugs
-     
      в MF - при изменении размера вьюпорта .catalog-item подстраивается под размер текста 
      http://savepic.ru/9650675.jpg
 -->
-      <div class="catalog-layout">
+       <div class="catalog-container">
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <div class="item-price">
+                310<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">310<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/2.png" alt="Сливочно-кофейное с кусочками шоколада">
+            <div class="item-price">
+              380<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">380<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочно-кофейное с кусочками шоколада</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <div class="item-price">
+              355<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">355<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочно-клубничное с присыпкой из белого шоколада</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/4.png" alt="Сливочное крем-брюле с карамельной подливкой">
+            <div class="item-price">
+              415<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">415<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочное крем-брюле с карамельной подливкой</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
        </div>
-       <div class="catalog-layout"> 
+
+       <div class="catalog-container"> 
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/5.png" alt="Сливочное с брусничным джемом">
+            <div class="item-price">
+              325<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">325<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочное с брусничным джемом</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/6.png" alt="Сливочно-черничное с цельными ягодами черники">
+            <div class="item-price">
+              410<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">410<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочно-черничное с цельными ягодами черники</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/7.png" alt="Сливочно-лимонное с карамельной присыпкой">
+            <div class="item-price">
+              375<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">375<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочно-лимонное с карамельной присыпкой</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/8.png" alt="Сливочное с шоколадной стружкой">
+            <div class="item-price">
+              320<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">320<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочное с шоколадной стружкой</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
-        </div>
-       <div class="catalog-layout">
+       </div>
+        
+       <div class="catalog-container">
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/9.png" alt="Сливочно-ванильное с кусочками шоколада">
+            <div class="item-price">
+              440<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">440<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочно-ванильное с кусочками шоколада</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/10.png" alt="Сливочноe с ментоловым сиропом">
+            <div class="item-price">
+              435<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">435<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочноe с ментоловым сиропом</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/11.png" alt="Сливочное с кусочками черного шоколада">
+            <div class="item-price">
+              355<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">355<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочное с кусочками черного шоколада</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
             <img width="100%" src="img/12.png" alt="Сливочное с мятным сиропом">
+            <div class="item-price">
+              420<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span>
+            </div>
           </div>
-          <div class="item-price">420<img width="27" height="32" src="img/Rub.svg" alt="руб"><span>/кг</span></div>
           <div class="item-description"><a href="/">Сливочное с мятным сиропом</a></div>
           <button class="btn">Быстрый просмотр</button>
         </div>
       </div>
       </section> 
+      
       <section class="pagination">
        <ul>
         <li>
@@ -296,7 +318,6 @@
             <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="footer-info"> 
-         <!-- Вот этот способ CSS для двух столбиков  https://jsfiddle.net/rogatnev_nikita/74dfL3xb/ не подходит, так как столбики разной ширины. Два списка пойдёт? -->
           <ul class="footer-info-columns footer-info-columns1">
             <li>
               <a href="#"><b>Для поставщиков</b></a>

@@ -35,7 +35,7 @@ body > input[type=radio] {
     display: none;
 }
 .site-wrapper {
-    min-width: 940px;
+    min-width: 900px;
     background-color: #849d8f;
     background-image: url("/img/Main_slider_1.png");
     background-repeat: no-repeat;
@@ -46,9 +46,10 @@ body > input[type=radio] {
 }
 .slider {
     position: relative;
-    padding-top: 270px;
+    padding-top: 327px;
     text-align: center;
     color: #ffffff;
+    margin-bottom: 40px;
 }
 .slide {
     display: none;
@@ -123,17 +124,17 @@ body > input[type=radio] {
 /* Мороженки слайдера */
 #slide1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("/img/Main_slider_1.png");
+  background-image: url("../img/Main_slider_1.png");
 }
 
 #slide2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("/img/Main_slider_2.png");
+  background-image: url("../img/Main_slider_2.png");
 }
 
 #slide3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("/img/Main_slider_3.png");
+  background-image: url("../img/Main_slider_3.png");
 }
 
 
@@ -144,7 +145,7 @@ body > input[type=radio] {
 body {
     
 }
-.container {
+div.container {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -185,50 +186,26 @@ body {
     display: inline-block;
 }
 .user-block-info {
+    position: absolute;
+    top: 43px;
+    right: 0px;
+    width: 180px;
+    text-align: right;
+}
+main {
     
 }
-main.container {
-        -webkit-box-orient: vertical;
-     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-           -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-              -ms-flex-pack: start;
-            justify-content: flex-start;
-      -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-         -ms-flex-align: start;
-     -ms-grid-row-align: flex-start;
-            align-items: flex-start;
-    padding: 0 20px;
-}
 .promo-banners {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-           -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-              -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-around;
+    box-sizing: border-box;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
     margin-bottom: 40px;
 }
 .promo-banners div {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-           -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-              -ms-flex-pack: justify;
-            justify-content: space-between;
     box-sizing: border-box;
     min-width: 420px;
     max-width: 560px;
@@ -240,49 +217,39 @@ main.container {
     margin-right: 20px;
 }
 .about {
+    display: flex;
+    justify-content: space-around;
     box-sizing: border-box;
-    min-width: 860px;
-    max-width: 1140px;
-    min-height: 306px;
-    padding: 26px 20px;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
     margin-bottom: 40px;
 }
+.about-positioner {
+    box-sizing: border-box;
+    min-width: 860px;
+    max-width: 1146px;
+    min-height: 306px;
+    padding: 26px 20px;
+}
 .about2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-around;
+    box-sizing: border-box;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
     margin-bottom: 40px;
 }
 .about2 div {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-        -webkit-box-orient: vertical;
-     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-     -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-            flex-grow: 1;
     box-sizing: border-box;
     min-width: 420px;
     max-width: 560px;
     min-height: 220px;
 }
 .about2 .blog {
-           -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-              -ms-flex-pack: start;
-            justify-content: flex-start;
-    
     margin-right: 20px;
     padding: 26px 20px;
     padding-right: 70px;
@@ -291,21 +258,17 @@ main.container {
     padding: 5px;
 }
 .about2 .background-inner {
-           -webkit-box-pack: center;
-    -webkit-justify-content: center;
-              -ms-flex-pack: center;
-            justify-content: center;
     min-width: 410px;
     max-width: 550px;
     min-height: 210px;
     padding: 35px 20px;
 }
-.map { /* Карта, почему ты не хочешь тянуться ни с какими свойствам и, а? */ 
+.map { 
     box-sizing: border-box;
     max-width: 1200px;
     min-width: 900px;
     min-height: 430px;
-    margin: 0 -20px;
+    margin: 0 auto;
 }
 .main-footer .container {
            -webkit-box-pack: justify;
@@ -332,63 +295,67 @@ main.container {
 
 /* Страница каталога */
 
-.h2{
-
+.breadcrumbs,
+.positioner,
+.pagination {
+    box-sizing: border-box;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 .breadcrumbs li {
     display: inline-block;
+}
+.h2{
+    
 }
 .filter fieldset {
     display: inline-block;
 }
 .filter {
     width: 860px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 .catalog {
-    margin: 0;
+    
 }
-.catalog-layout {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+.catalog-container {
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-around;
+    box-sizing: border-box;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    
 }
 .catalog-item {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; 
-    min-width: 200px;
-    max-width: 267px;
-    margin-bottom: 40px;
-    margin-right: 20px;
+    box-sizing: border-box;
+    min-width: 220px;
+    max-width: 287px;
+    padding: 0 10px;
 }
-.catalog-image,
+.catalog-image {
+    position: relative;
+}
 .item-price {
-    width: inherit;
+    position: absolute;
+    left: 0;
+    bottom: 18px;
 }
 .item-description {
     width: 98%;
+    margin: 0 auto;
+    margin-top: 10px;
 }
-.catalog-image img {
+.catalog-image > img {
     display: block;
     width: 100%;
 }
 .pagination {
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
-    
-    box-sizing: border-box;
 /*  padding-top: 70px;
     padding-bottom: 50px; */
 }
@@ -416,13 +383,6 @@ a:hover {
     color: #ffffff;
 }
 
-.user-block-info {
-    position: absolute;
-    top: 43px;
-    right: 0px;
-    width: 169px;
-    text-align: right;
-}
 .user-block-info .info-time {
     font-size: 14px;
     font-weight: 700;
@@ -520,28 +480,27 @@ a:hover {
 
 /* Фоны */
 
-/* Почему не отображается bg-img во всех браузерах кроме хрома???!!!>_< */
 .promo-banners .promo1 {
-    background: url("/img/Background_promo_1.png") no-repeat #bf0937;
+    background: url("../img/Background_promo_1.png") no-repeat #bf0937;
     background-position: right top;
     border-radius: 15px;
 }
 .promo-banners .promo2 {
-    background: url("/img/Background_promo_2.png") no-repeat #522e19;
+    background: url("../img/Background_promo_2.png") no-repeat #522e19;
     background-position: right top;
     border-radius: 15px;
 }
-.about {
-    background: url("/img/waffle-pat.jpg") #ebdec3;
+.about-positioner {
+    background: url("../img/waffle-pat.jpg") #ebdec3;
     border-radius: 15px;
 }
 .about2 .blog {
-    background: url("/img/Background_about2_blog.png") no-repeat white;
+    background: url("../img/Background_about2_blog.png") no-repeat white;
     background-position: right top;
     border-radius: 15px;
 }
 .about2 .subscription {
-    background-image: url("/img/Background_about2_subscription.png");
+    background-image: url("../img/Background_about2_subscription.png");
     background-color: white;
     border-radius: 15px;
 }
@@ -550,14 +509,5 @@ a:hover {
     border-radius: 15px;
 }
 .map {
-    background: url("/img/Background_map.png") no-repeat white;
+    background: url("../img/Background_map.png") no-repeat white;
 }
-
-
-
-
-
-
-
-
-
