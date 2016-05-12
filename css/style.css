@@ -41,15 +41,22 @@ body > input[type=radio] {
     background-repeat: no-repeat;
     background-position: top center;
 }
-.content-wrapper {
+.slider-wrapper {
+    box-sizing: border-box;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 20px;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 .slider {
     position: relative;
+    box-sizing: border-box;
+    min-width: 860px;
+    max-width: 1146px;
     padding-top: 327px;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 40px;
 }
 .slide {
     display: none;
@@ -95,7 +102,7 @@ body > input[type=radio] {
 }
 .slider-controls {
     position: absolute;
-    bottom: 25px;
+    bottom: 22px;
     left: 0;
     z-index: 20;
     font-size: 0;
@@ -110,6 +117,9 @@ body > input[type=radio] {
     border: 2px solid #ffffff;
     border-radius: 50%;
     vertical-align: top;
+}
+.slider-controls label:hover {
+    background-color:  rgba(248, 247, 244, 0.4);
 }
 #slide1:checked ~ .site-wrapper #slide-title1,
 #slide2:checked ~ .site-wrapper #slide-title2,
@@ -233,11 +243,14 @@ main {
     margin-bottom: 40px;
 }
 .promo-banners div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-sizing: border-box;
     min-width: 420px;
     max-width: 560px;
     min-height: 229px;
-    padding: 20px;
+    padding: 20px; 
     padding-bottom: 24px;
 }
 .promo-banners .promo1 {
@@ -434,7 +447,33 @@ main {
 
 /* Иконки */
 
-.enter::before {
+.user-block-btn-search::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  display: block;
+  width: 17px;
+  height: 20px;
+
+  background: url("../img/Sprite_user-block.png") no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.user-block-btn-search:hover::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  display: block;
+  width: 17px;
+  height: 20px;
+
+  background: url("../img/Sprite_user-block_hover.png") no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.user-block-btn-enter::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -447,7 +486,20 @@ main {
   background-position: -51px 0 ;
   opacity: 1;
 }
-.bascket::before {
+.user-block-btn-enter:hover::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  display: block;
+  width: 21px;
+  height: 20px;
+
+  background: transparent url("../img/Sprite_user-block_hover.png") no-repeat;
+  background-position: -316px 0 ;
+  opacity: 1;
+}
+.user-block-btn-bascket::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -460,18 +512,48 @@ main {
   background-position: -153px 0 ;
   opacity: 1;
 }
-.search::before {
+.user-block-btn-bascket:hover::before {
   content: "";
   position: absolute;
   top: 6px;
-  left: 8px;
+  left: 16px;
   display: block;
-  width: 17px;
+  width: 21px;
   height: 20px;
 
-  background: url("../img/Sprite_user-block.png") no-repeat;
-  background-position: 0 0;
+  background: transparent url("../img/Sprite_user-block_hover.png") no-repeat;
+  background-position: -941px 0 ;
   opacity: 1;
+}
+
+/* Кнопки */
+
+.promo-banners a {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #db4e33;
+    background-image: linear-gradient(to bottom, #f16944, #c93926);
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
+    cursor: pointer;
+    
+    align-self: flex-end;
+}
+
+.btn:hover {
+    background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+    background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+    background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    box-shadow: 0px 1px 2px 0px #ac1000;
+}
+
+.btn:active {
+    background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+    background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+    background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 /* Текст */
@@ -528,6 +610,10 @@ a:hover {
 .user-block-btn-search {
     font-size: 0;
 }
+.user-block-btn:hover {
+    color: #323232;
+    background-color: #f8f7f4;
+}
 .user-block-info .info-time {
     font-size: 14px;
     font-weight: 700;
@@ -537,6 +623,21 @@ a:hover {
     font-size: 22px;
     font-weight: 900;
     line-height: 24px;
+}
+.promo-banners p {
+    color:  #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+}
+.promo-banners a {
+    color:  #ffffff;
+    font-size: 18px; 
+    font-weight: 700;
+    line-height: 24px; 
+    text-align: center;
+    vertical-align: top;
 }
 .blog p {
     color: #5a5a5a;
@@ -551,6 +652,8 @@ a:hover {
     font-weight: 700;
     line-height: 30px;
     text-align: left;
+    text-decoration: underline;
+    background-color:  rgba(255, 255, 255, 0.8);
 }
 .about p {
     color: #323232;

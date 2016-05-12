@@ -12,7 +12,6 @@
     <input type="radio" name="slide" id="slide2">      
     <input type="radio" name="slide" id="slide3">
     <div class="site-wrapper">
-      <div class="content-wrapper">
       
         <header class="main-header">
           <div class="container">
@@ -106,8 +105,11 @@
             </div>  
           </div>        
         </header>
-                    <!-- Слайдер - начало -->  
-      <div class="slider">
+       
+                    <!-- Слайдер - начало -->
+     
+      <section class="slider-wrapper">                 
+        <div class="slider">
                 <div class="slide" id="slide-title1">
                   <h1>Крем-брюле и пломбир с малиновым джемом</h1>
                   <a class="slide-btn" href="#">Давайте оба!</a>
@@ -121,13 +123,14 @@
                   <h1>Пломбир с помадкой и клубничный щербет</h1>
                   <a class="slide-btn" href="#">Давайте оба!</a>
                 </div>
+                <div class="slider-controls">
+                  <label for="slide1"></label>
+                  <label for="slide2"></label>
+                  <label for="slide3"></label>
+                </div>
         </div>
-        <div class="slider-controls">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-            <label for="slide3"></label>
-        </div>
-      </div>
+        
+        </section>
                     <!-- Слайдер - конец --> 
     <main>
       <section class="promo-banners">
@@ -277,8 +280,6 @@
         </section>
       </div>
     </footer>
-     
-      </div>
     </div>
   </body>
 </html>
