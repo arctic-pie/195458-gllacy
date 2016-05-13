@@ -146,7 +146,7 @@
         </div>
       </section>
       
-      <section class="catalog">
+      <section class="catalog hits">
         <div class="catalog-container">
         <div class="catalog-item">
           <div class="catalog-image">
@@ -156,7 +156,9 @@
             </div>
           </div>
           <div class="item-description"><a href="/">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></div>
-          <button class="btn">Быстрый просмотр</button>
+          <div class="catalog-item-hover">
+              <button class="btn">Быстрый просмотр</button>
+          </div>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
@@ -166,7 +168,9 @@
             </div>
           </div>
           <div class="item-description"><a href="/">Сливочно-кофейное с кусочками шоколада</a></div>
-          <button class="btn">Быстрый просмотр</button>
+          <div class="catalog-item-hover">
+            <button class="btn">Быстрый просмотр</button>
+          </div>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
@@ -176,7 +180,9 @@
             </div>
           </div>
           <div class="item-description"><a href="/">Сливочно-клубничное с присыпкой из белого шоколада</a></div>
-          <button class="btn">Быстрый просмотр</button>
+          <div class="catalog-item-hover">              
+            <button class="btn">Быстрый просмотр</button>           
+          </div>
         </div>
         <div class="catalog-item">
           <div class="catalog-image">
@@ -186,13 +192,15 @@
             </div>
           </div>
           <div class="item-description"><a href="/">Сливочное крем-брюле с карамельной подливкой</a></div>
-          <button class="btn">Быстрый просмотр</button>
+          <div class="catalog-item-hover">              
+            <button class="btn">Быстрый просмотр</button>           
+          </div>
         </div>
        </div>
       </section>
       
-      <section class="about">
-      <div class="about-positioner">
+      <section class="features">
+      <div class="features-positioner">
         <p>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес.</p>
         <ul>
           <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
@@ -206,13 +214,16 @@
       <section class="about2">
         <div class="blog">
           <p>Новое в нашем блоге</p>
-          <a href="#">10  способов сервировки фруктовых щербетов к столу</a>
+            <a href="#">
+              <span>10  способов сервировки фруктовых щербетов к столу</span>
+            </a>
         </div>
         <div class="subscription">
           <div class="background-inner">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
             <form action="#" method="post">
-              <input type="email" name="email" placeholder="Электронная почта">
+              <label for="subscription">Электронная почта</label>
+              <input type="email" name="email" placeholder="Электронная почта" id="subscription">
               <button class="btn" type="submit">Отправить</button>
             </form>
           </div>
@@ -228,7 +239,7 @@
             <p>
               <span class="text">Для заказов по телефону:</span>
               <span class="bold-text">8 812 450-25-25</span>
-                  <span class="text">(с 10 до 20 ежедневно)</span>
+              <span class="text">(с 10 до 20 ежедневно)</span>
             </p>
             <button class="btn" type="submit">Форма обратной связи</button>
           </div>
@@ -256,7 +267,7 @@
         </section>
         <section class="footer-info"> 
           <ul class="footer-info-columns footer-info-columns1">
-            <li>
+            <li class="heart">
               <a href="#"><b>Для поставщиков</b></a>
             </li>
             <li>

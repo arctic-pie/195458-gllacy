@@ -256,7 +256,7 @@ main {
 .promo-banners .promo1 {
     margin-right: 20px;
 }
-.about {
+.features {
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
@@ -266,12 +266,44 @@ main {
     margin: 0 auto;
     margin-bottom: 40px;
 }
-.about-positioner {
+.features-positioner {
     box-sizing: border-box;
     min-width: 860px;
     max-width: 1146px;
     min-height: 306px;
-    padding: 26px 20px;
+    padding: 25px 20px;
+    padding-bottom: 13px;
+}
+.features p {
+    margin-bottom: 10px;
+}
+.features ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.features li {
+    position: relative;
+    box-sizing: border-box;
+    width: 48.7906%;
+    margin-bottom: 11px;
+    padding-top: 11px;
+    padding-left: 57px;
+}
+.features li:first-child {
+    order: -1; 
+}
+.features li:nth-child(2) {  
+    order: 1;
+}
+.features li:nth-child(3) {
+    order: 0;
+}
+.features li:last-child {
+    order: 2;
 }
 .about2 {
     display: flex;
@@ -293,15 +325,22 @@ main {
     margin-right: 20px;
     padding: 26px 20px;
     padding-right: 70px;
+    width: 50%;
 }
 .about2 .subscription {
     padding: 5px;
+    width: 50%;
+}
+.subscription p {
+    min-height: 88px;
+    margin-bottom: 15px;
 }
 .about2 .background-inner {
     min-width: 410px;
     max-width: 550px;
     min-height: 210px;
     padding: 35px 20px;
+    padding-top: 28px
 }
 .map { 
     box-sizing: border-box;
@@ -373,6 +412,7 @@ main {
     
 }
 .catalog-item {
+    position: relative;
     box-sizing: border-box;
     min-width: 220px;
     max-width: 287px;
@@ -407,7 +447,8 @@ main {
 /* Ховеры */
 .dropdown,
 .hover,
-.catalog-item .btn{
+.catalog-item-hover
+{
     display: none;
 }
 .dropdown {
@@ -441,92 +482,240 @@ main {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.2);
 }
+.catalog-item:hover .catalog-item-hover{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 20;
+    top: -10px;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 130%;
+    padding-bottom: 20px;
 
+    text-align: center;
+    padding: 0 10px;
+   
+    border-radius: 5px;
+    background-color:  rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    
+}
+.catalog-item .btn{
+    margin-bottom: 20px;
+    display: block;
+    height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: top;
+}
 
 /* ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ */
 
 /* Иконки */
 
 .user-block-btn-search::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 8px;
-  display: block;
-  width: 17px;
-  height: 20px;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    display: block;
+    width: 17px;
+    height: 20px;
 
-  background: url("../img/Sprite_user-block.png") no-repeat;
-  background-position: 0 0;
-  opacity: 1;
+    background: url("../img/Sprite_user-block.png") no-repeat;
+    background-position: 0 0;
+    opacity: 1;
 }
 .user-block-btn-search:hover::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 8px;
-  display: block;
-  width: 17px;
-  height: 20px;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    display: block;
+    width: 17px;
+    height: 20px;
 
-  background: url("../img/Sprite_user-block_hover.png") no-repeat;
-  background-position: 0 0;
-  opacity: 1;
+    background: url("../img/Sprite_user-block_hover.png") no-repeat;
+    background-position: 0 0;
+    opacity: 1;
 }
 .user-block-btn-enter::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  display: block;
-  width: 21px;
-  height: 20px;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 20px;
 
-  background: transparent url("../img/Sprite_user-block.png") no-repeat;
-  background-position: -51px 0 ;
-  opacity: 1;
+    background: transparent url("../img/Sprite_user-block.png") no-repeat;
+    background-position: -51px 0 ;
+    opacity: 1;
 }
 .user-block-btn-enter:hover::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  display: block;
-  width: 21px;
-  height: 20px;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 20px;
 
-  background: transparent url("../img/Sprite_user-block_hover.png") no-repeat;
-  background-position: -316px 0 ;
-  opacity: 1;
+    background: transparent url("../img/Sprite_user-block_hover.png") no-repeat;
+    background-position: -316px 0 ;
+    opacity: 1;
 }
 .user-block-btn-bascket::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  display: block;
-  width: 21px;
-  height: 20px;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 20px;
 
-  background: transparent url("../img/Sprite_user-block.png") no-repeat;
-  background-position: -153px 0 ;
-  opacity: 1;
+    background: transparent url("../img/Sprite_user-block.png") no-repeat;
+    background-position: -153px 0 ;
+    opacity: 1;
 }
 .user-block-btn-bascket:hover::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  display: block;
-  width: 21px;
-  height: 20px;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 20px;
 
-  background: transparent url("../img/Sprite_user-block_hover.png") no-repeat;
-  background-position: -941px 0 ;
-  opacity: 1;
+    background: transparent url("../img/Sprite_user-block_hover.png") no-repeat;
+    background-position: -941px 0 ;
+    opacity: 1;
+}
+.features li:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 49px;
+    height: 49px;
+
+    background: transparent url("../img/Sprite_about.png") no-repeat;
+    background-position: 0 0 ;
+}
+.features li:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 49px;
+    height: 49px;
+
+    background: transparent url("../img/Sprite_about.png") no-repeat;
+    background-position: 0 -133px;
+}
+.features li:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 49px;
+    height: 49px;
+
+    background: transparent url("../img/Sprite_about.png") no-repeat;
+    background-position: -420px 0 ;
+}
+.features li:last-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 49px;
+    height: 49px;
+
+    background: transparent url("../img/Sprite_about.png") no-repeat;
+    background-position: -420px -133px;
+}
+.social-btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    box-sizing: border-box;
+    width: 38px;
+    height: 38px;
+    margin-right: 11px;
+    
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+.social-btn:last-child {
+    margin-right: 0;
+}
+.social-btn:hover {
+    border: 3px solid rgba(255, 255, 255, 0.71);
+}
+.social-btn:active {
+    box-shadow: inset 0 2px 1px 0 #888888;
+}
+.social-btn-twit {
+    background: transparent url("../img/Sprite_social-btn.svg") no-repeat;
+    background-position: 0px 0px;
+}
+.social-btn-inst {
+    background: transparent url("../img/Sprite_social-btn.svg") no-repeat;
+    background-position: -50px 0px;
+}
+.social-btn-fb {
+    background: transparent url("../img/Sprite_social-btn.svg") no-repeat;
+    background-position: -99px 0px;
+}
+.social-btn-vk {
+    background: transparent url("../img/Sprite_social-btn.svg") no-repeat;
+    background-position: -148px 0px;
+}
+li.heart {
+    position: relative;
+}
+li.heart::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -22px;
+    display: block;
+    width: 15px;
+    height: 13px;
+
+    background: transparent url("../img/Heart.svg") no-repeat;
+    background-position: 0 0;
 }
 
+
 /* Кнопки */
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 22px;
+    background-color: #db4e33;
+    background-image: linear-gradient(to bottom, #f16944, #c93926);
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
+    cursor: pointer;
+    
+    color:  #fefefe;
+    font-size: 18px; 
+    font-weight: 700;
+    line-height: 24px; 
+    text-align: left;
+}
 
 .promo-banners a {
     display: inline-block;
@@ -556,6 +745,42 @@ main {
     box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
+/* Формы */
+
+.subscription label {
+    display: none;
+}
+.subscription form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    
+}
+.subscription input[type="email"] {
+    flex-grow: 1;
+    height: 44px;
+    box-sizing: border-box;
+    min-width: 229px;
+    max-width: 368px;
+    margin-right: 11px;
+    margin-bottom: 0;
+    padding-left: 15px;
+    
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  rgba(178, 178, 178, 52);
+    box-sizing: border-box;
+    background-color:  #ffffff;
+    
+    color:  #999999;
+    font-size: 16px; 
+    font-weight: 400;
+    line-height: 24px; 
+    text-align: left;
+}
+
+
 /* Текст */
 
 a:link,
@@ -569,7 +794,6 @@ a:hover {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    text-decoration: none;
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 .main-menu:hover a {
@@ -647,22 +871,30 @@ a:hover {
     text-align: left;
 }
 .blog a {
+    display: inline-block;
     color: #353535;
     font-size: 24px; 
     font-weight: 700;
     line-height: 30px;
     text-align: left;
     text-decoration: underline;
+    max-width: 300px;
+    margin-right: auto;
+}
+.blog a:hover {
+    
+}
+.blog span {
     background-color:  rgba(255, 255, 255, 0.8);
 }
-.about p {
+.features p {
     color: #323232;
     font-size: 24px; 
     font-weight: 500;
     line-height: 30px; 
     text-align: left;
 }
-.about li {
+.features li {
     color: #323232;
     font-size: 16px;
     font-weight: 400;
@@ -687,7 +919,10 @@ a:hover {
     font-size: 16px;
     font-weight: 500;
     line-height: 21px; 
-    text-align: center;
+    text-align: center;    
+}
+.item-description a {    
+    border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 .catalog-item .item-price {
     color: #ffffff;
@@ -712,10 +947,13 @@ a:hover {
     color: #ffffff;
     font-size: 13px; 
     font-weight: 400;
-    line-height: 16px;
+    line-height: 18px;
     text-align: left;
 }
-.footer-info-columns2 li:first-child {
+.footer-info a {
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.footer-info-columns1 li:first-child {
     font-weight: 700;
 }
 .footer-copyright span {
@@ -724,6 +962,9 @@ a:hover {
     font-weight: 400;
     line-height: 16px;
     text-align: left;
+}
+.footer-copyright a {
+    border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
 /* Фоны */
@@ -738,7 +979,7 @@ a:hover {
     background-position: right top;
     border-radius: 15px;
 }
-.about-positioner {
+.features-positioner {
     background: url("../img/waffle-pat.jpg") #ebdec3;
     border-radius: 15px;
 }
