@@ -428,6 +428,7 @@ main {
     bottom: 18px;
 }
 .item-description {
+    position: relative;
     width: 98%;
     margin: 0 auto;
     margin-top: 10px;
