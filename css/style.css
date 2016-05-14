@@ -386,6 +386,7 @@ main {
 }
 .breadcrumbs li {
     display: inline-block;
+    vertical-align: middle;
 }
 .h2{
     
@@ -935,6 +936,13 @@ a:hover {
     background-color: #f7f6f3;
     border-radius: 16px;
 }
+.main-menu-active {
+    background-color:  #d07058;
+    border-radius: 16px;
+}
+.main-menu-active a {
+    border-bottom: none;
+}
 .dropdown a {
     color:  #323232;
     font-size: 14px;
@@ -1043,6 +1051,9 @@ a:hover {
     font-weight: 400;
     line-height: 16px;
     text-align: left;   
+}
+.breadcrumbs a{
+    border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 .catalog-item .item-description {
     color: #ffffff;
