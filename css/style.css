@@ -495,6 +495,7 @@ main {
     box-sizing: border-box;
     width: 100%;
     height: 130%;
+    min-height: 340px;
     padding-bottom: 20px;
 
     text-align: center;
@@ -799,19 +800,28 @@ li.heart::before {
     box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 .pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    
     padding-top: 60px;
     padding-bottom: 30px;
     position: relative;
 }
 .pagination ul {
     display: block;
-    min-width: 200px;
+    min-width: 190px;
     margin: 0;
     padding: 0;
-    text-align: right;
 }
 .pagination-btn {
     display: inline-block;
+    vertical-align: middle;
     box-sizing: border-box;
     width: 26px;
     height: 26px;
