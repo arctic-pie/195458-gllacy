@@ -16,6 +16,7 @@ h1 {
 h2 {
     margin: 0;
     padding: 0;
+    margin-bottom: 20px;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -70,6 +71,9 @@ body > input[type=radio] {
 }
 .slide-btn {
     display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    height: 64px;
     padding: 12px 50px;
 
     font-weight: 600;
@@ -88,6 +92,7 @@ body > input[type=radio] {
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 .slide-btn:hover {
+    color: #ffffff;
     background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
     background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
     background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
@@ -752,23 +757,23 @@ input[type="radio"]:disabled ~ label:hover::before {
 #filter-flavors3:checked ~ label[for="filter-flavors3"]::before,
 #filter-flavors4:checked ~ label[for="filter-flavors4"]::before,
 #filter-flavors5:checked ~ label[for="filter-flavors5"]::before {
-  background-image: url("../img/filter-flavors-checked.png");
+    background-image: url("../img/filter-flavors-checked.png");
 }
 #filter-flavors1:checked ~ label[for="filter-flavors1"]:hover::before,
 #filter-flavors2:checked ~ label[for="filter-flavors2"]:hover::before,
 #filter-flavors3:checked ~ label[for="filter-flavors3"]:hover::before,
 #filter-flavors4:checked ~ label[for="filter-flavors4"]:hover::before,
 #filter-flavors5:checked ~ label[for="filter-flavors5"]:hover::before {
-  background-image: url("../img/filter-flavors-checked-hover.png");
+    background-image: url("../img/filter-flavors-checked-hover.png");
 }
 input[type="checkbox"]:disabled ~ label {
-  color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.4);
 }
 input[type="checkbox"]:disabled ~ label::before {
-  background-image: url("../img/filter-flavors-disabled.png");
+    background-image: url("../img/filter-flavors-disabled.png");
 }
 input[type="checkbox"]:disabled ~ label:hover::before {
-  background-image: url("../img/filter-flavors-checked-disabled.png");
+    background-image: url("../img/filter-flavors-checked-disabled.png");
 }
 .filter button[type="submit"] {
     box-sizing: border-box;
@@ -1023,20 +1028,11 @@ li.heart::before {
     text-align: left;
 }
 
-.promo-banners a {
-    display: inline-block;
-    padding: 10px 22px;
-    background-color: #db4e33;
-    background-image: linear-gradient(to bottom, #f16944, #c93926);
-    border: none;
-    border-radius: 25px;
-    outline: none;
-    box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
-    cursor: pointer;
-    
+.promo-banners .btn {
+    box-sizing: border-box;
+    height: 44px;
     align-self: flex-end;
 }
-
 .btn:hover {
     background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
     background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
@@ -1162,7 +1158,7 @@ li.heart::before {
 }
 
 
-/* Текст */
+/* Текст и ссылки */
 
 a:link,
 a:visited, 
@@ -1177,6 +1173,7 @@ a:hover {
 }
 a:active {
     color: #ffbc9e;
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 .main-menu a {
     font-size: 16px;
@@ -1209,6 +1206,17 @@ a:active {
 }
 .dropdown li:hover {
     background-color:  #fbded8;
+}
+.dropdown li:active {
+    background-color:  #f6b5a5;
+}
+.dropdown li.active {
+    background-color:  #d07058;
+}
+.dropdown a.disabled {
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
 }
 .novelties a {
     color:  #323232;
@@ -1277,7 +1285,7 @@ a:active {
     margin-right: auto;
 }
 .blog a:hover {
-    
+    color: #ffbc9e;
 }
 .blog span {
     background-color:  rgba(255, 255, 255, 0.8);
@@ -1312,6 +1320,14 @@ a:active {
 .breadcrumbs a{
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
+.breadcrumbs a:hover {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+.breadcrumbs a:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
 .breadcrumbs-link::after {
     content: "»";
     margin: 0 8px;
@@ -1331,6 +1347,13 @@ a:active {
 }
 .item-description a {    
     border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.item-description a:hover {
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+.item-description a:active {
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 .catalog-item .item-price {
     color: #ffffff;
@@ -1375,6 +1398,12 @@ a:active {
 .footer-info a {
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
+.footer-info a:hover {
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+.footer-info a:active {
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
 .footer-info-columns1 li:first-child {
     font-weight: 700;
 }
@@ -1387,6 +1416,12 @@ a:active {
 }
 .footer-copyright a {
     border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.footer-copyright a:hover {
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+.footer-copyright a:active {
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 
 /* Фоны */
