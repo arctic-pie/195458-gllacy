@@ -2,8 +2,8 @@ body {
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
-    font-weight: 700;
-    font-family: Roboto, Arial, sans-serif; 
+    font-weight: 400;
+    font-family: 'Roboto', 'Arial', sans-serif; 
     background-color: #849d8f;
     box-sizing: border-box;
 }
@@ -16,7 +16,6 @@ h1 {
 h2 {
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -28,7 +27,8 @@ p {
 }
 ul {
     list-style: none;
-    padding-left: 0
+    padding-left: 0;
+    margin: 0;
 }
 
 /* Слайдер главной страницы */
@@ -56,6 +56,7 @@ body > input[type=radio] {
     min-width: 860px;
     max-width: 1146px;
     padding-top: 327px;
+    margin: 0 auto;
     text-align: center;
     color: #ffffff;
 }
@@ -63,11 +64,11 @@ body > input[type=radio] {
     display: none;
 }
 .slider h1 {
-  width: 700px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  font-weight: 800;
-  font-size: 60px;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 60px;
 }
 .slide-btn {
     display: inline-block;
@@ -210,6 +211,7 @@ div.container {
 .user-block-btn {
     display: block;
     position: relative;
+    z-index: 20;
     box-sizing: border-box;
     height: 32px;
     padding: 8px 0;
@@ -225,7 +227,7 @@ div.container {
     width: 93px;
 }
 .user-block-btn-bascket {
-    width: 117px;
+    min-width: 117px;
 }
 .user-block-info {
     position: absolute;
@@ -389,19 +391,22 @@ main {
     padding: 0 20px;
     margin: 0 auto;
 }
+.breadcrumbs {
+    padding-top: 14px
+}
+.positioner {
+    padding-top: 4px
+}
 .breadcrumbs li {
     display: inline-block;
     vertical-align: middle;
-}
-.h2{
-    
 }
 .filter fieldset {
     
 }
 .filter {
     width: 860px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 40px;
 }
 .catalog {
@@ -448,17 +453,23 @@ main {
 }
 
 
-/* Ховеры */
-.dropdown,
+          /* Ховеры */
 .hover,
-.catalog-item-hover
-{
+.catalog-item-hover {
     display: none;
 }
-.dropdown {
+.main-menu:hover .dropdown-hover-fixer {
+    display: block;
     position: absolute;
     left: -7px;
-    top: 37px;
+    z-index: 20;
+    box-sizing: border-box;
+    width: 143px;
+    padding-top: 7px;
+}
+.main-menu:hover .dropdown {
+    display: block;
+    position: absolute;
     z-index: 20;
     box-sizing: border-box;
     width: 143px;
@@ -473,9 +484,6 @@ main {
 .dropdown li:first-child {
     margin-bottom: 5px;
 }
-.main-menu:hover .dropdown {
-    display: block;
-}
 .novelties::after {
     content: "";
     position: absolute;
@@ -486,7 +494,104 @@ main {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.2);
 }
-.catalog-item:hover .catalog-item-hover{
+.search:hover  .search-hover-fixer {
+    display: block;   
+    position: absolute;
+    right: 0;
+    z-index: 30;
+    width: 340px;
+    padding-top: 5px;
+}
+.search:hover  .search-hover {
+    display: block;   
+    position: absolute;
+    right: 0;
+    z-index: 30;
+    box-sizing: border-box;
+    width: 340px;
+    height: 84px;
+    padding: 20px 15px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    
+    background-color:  #f8f7f4;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.search-hover input {
+    box-sizing: border-box;
+    width: 311px;
+    height: 44px;
+    padding-left: 15px;
+    margin: 0 auto;
+    
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  rgba(178, 178, 178, 52);
+    background-color:  #ffffff;
+    
+    color:  #999999;
+    font-size: 16px; 
+    font-weight: 400;
+    line-height: 24px; 
+    text-align: left;  
+}
+.enter:hover  .enter-hover-fixer {
+    display: block;   
+    position: absolute;
+    right: 0;
+    z-index: 30;
+    width: 277px;
+    padding-top: 5px;
+}
+.enter:hover  .enter-hover {
+    display: block;   
+    position: absolute;
+    right: 0;
+    z-index: 30;
+    box-sizing: border-box;
+    height: 214px;
+    width: 277px;
+    padding: 20px 20px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    
+    background-color:  #f8f7f4;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.enter-hover input {
+    box-sizing: border-box;
+    width: 240px;
+    height: 44px;
+    padding-left: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  rgba(178, 178, 178, 52);
+    background-color:  #ffffff;
+    
+    color:  #999999;
+    font-size: 16px; 
+    font-weight: 400;
+    line-height: 24px; 
+    text-align: left;  
+}
+.enter-hover-links {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 18px;
+}
+.catalog-item:hover .catalog-item-hover {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -658,6 +763,9 @@ fieldset legend {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+.range-controls-toggle:hover {
+    transform: scale(1.1);
+}
 .range-controls-toggle-min {
     left: 18px;
 }
@@ -815,7 +923,7 @@ input[type="checkbox"]:disabled ~ label:hover::before {
     background-position: 0 0;
     opacity: 1;
 }
-.user-block-btn-search:hover::before {
+.search:hover .user-block-btn-search::before {
     content: "";
     position: absolute;
     top: 6px;
@@ -841,7 +949,7 @@ input[type="checkbox"]:disabled ~ label:hover::before {
     background-position: -51px 0 ;
     opacity: 1;
 }
-.user-block-btn-enter:hover::before {
+.enter:hover .user-block-btn-enter::before {
     content: "";
     position: absolute;
     top: 6px;
@@ -867,7 +975,7 @@ input[type="checkbox"]:disabled ~ label:hover::before {
     background-position: -153px 0 ;
     opacity: 1;
 }
-.user-block-btn-bascket:hover::before {
+.bascket:hover .user-block-btn-bascket::before {
     content: "";
     position: absolute;
     top: 6px;
@@ -1009,6 +1117,7 @@ li.heart::before {
 
 /* Кнопки */
 
+
 .btn {
     display: inline-block;
     vertical-align: top;
@@ -1054,8 +1163,7 @@ li.heart::before {
     min-width: 900px;
     max-width: 1200px;
     padding: 0 20px;
-    margin: 0 auto;
-    
+    margin: 0 auto; 
     padding-top: 60px;
     padding-bottom: 30px;
     position: relative;
@@ -1122,7 +1230,10 @@ li.heart::before {
 .pagination-btn-next:hover {
     background-color: transparent;
 }
+
+
 /* Формы */
+
 
 .subscription label {
     display: none;
@@ -1130,15 +1241,14 @@ li.heart::before {
 .subscription form {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0;
-    
+    margin-bottom: 0;  
 }
 .subscription input[type="email"] {
     flex-grow: 1;
-    height: 44px;
     box-sizing: border-box;
     min-width: 229px;
     max-width: 368px;
+    height: 44px;
     margin-right: 11px;
     margin-bottom: 0;
     padding-left: 15px;
@@ -1147,7 +1257,6 @@ li.heart::before {
     border-style: solid;
     border-width: 1px;
     border-color:  rgba(178, 178, 178, 52);
-    box-sizing: border-box;
     background-color:  #ffffff;
     
     color:  #999999;
@@ -1160,6 +1269,7 @@ li.heart::before {
 
 /* Текст и ссылки */
 
+
 a:link,
 a:visited, 
 a:active, 
@@ -1169,11 +1279,9 @@ a:hover {
 }
 a:hover {
     color: #ffbc9e;
-    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 a:active {
     color: #ffbc9e;
-    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 .main-menu a {
     font-size: 16px;
@@ -1237,7 +1345,9 @@ a:active {
 .user-block-btn-search {
     font-size: 0;
 }
-.user-block-btn:hover {
+.search:hover .user-block-btn-search,
+.enter:hover .user-block-btn-enter,
+.bascket:hover .user-block-btn-bascket {
     color: #323232;
     background-color: #f8f7f4;
 }
@@ -1250,6 +1360,22 @@ a:active {
     font-size: 22px;
     font-weight: 900;
     line-height: 24px;
+}
+.enter-hover-links a {
+    color:  #323232;
+    font-size: 13px;/ 
+    font-weight: 400;
+    line-height: 24px; 
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+.enter-hover-links a:hover {
+    color: #e84d37;
+    border-bottom: 1px solid rgba(236, 89, 60, 0.4);
+}
+.enter-hover-links a:active {
+    color: #e84d37;
+    border-bottom: 1px solid rgba(236, 89, 60, 0.4);
 }
 .promo-banners p {
     color:  #ffffff;
@@ -1285,7 +1411,7 @@ a:active {
     margin-right: auto;
 }
 .blog a:hover {
-    color: #ffbc9e;
+    color: #e84d37;
 }
 .blog span {
     background-color:  rgba(255, 255, 255, 0.8);
