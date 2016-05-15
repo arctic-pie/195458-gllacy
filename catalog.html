@@ -103,10 +103,10 @@
     <main>
       <nav class="breadcrumbs">
         <ul>
-            <li>
+            <li class="breadcrumbs-link">
                 <a href="index.html">Главная</a>
             </li>
-            <li>
+            <li class="breadcrumbs-link">
                 <a href="#">Каталог</a>
             </li>
             <li>
@@ -118,7 +118,7 @@
       <h2>Сливочное мороженое</h2> 
       <aside class="filter">
         <form action="#" method="post">
-          <fieldset>
+          <fieldset class="filter-sort">
             <legend>Сортировка:</legend>
             <select name="sorting">
               <option value="по популярности">по популярности</option>
@@ -127,27 +127,42 @@
               <option value="по жирности">по жирности</option> 
             </select>
           </fieldset>
-          <fieldset>  
+          <fieldset class="filter-price">  
                         <!--Как сделать двойной ползунок без jQuery UI Slider: 
                             http://ionden.com/a/plugins/ion.rangeSlider/
                             https://habrahabr.ru/post/247935/-->
-            <legend>Цена:</legend> 100 руб. – 500 руб.
-            <input type="range" name="price" min=0 max=700 value=100>
+            <legend>Цена: <span class="filter-price-value">100</span> руб. – <span class="filter-price-value">500</span> руб.</legend>
+            <div class="range-controls">
+            <div class="range-controls-scale">
+              <div class="range-controls-bar"></div>
+            </div>
+            <div class="range-controls-toggle range-controls-toggle-min"></div>
+            <div class="range-controls-toggle range-controls-toggle-max"></div>
+          </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-fat-content">
             <legend>Жирность:</legend>
-            <label><input type="radio" name="fat" value="0%до 10%">0%до 10%</label>
-            <label><input type="radio" name="fat" value="до 10%" checked>до 10%</label>
-            <label><input type="radio" name="fat" value="до 30%">до 30%</label>
-            <label><input type="radio" name="fat" value="выше 30%">выше 30%</label>
+            <input id="filter-fat1" type="radio" name="fat" value="0%до 10%">
+            <label for="filter-fat1">0%</label>
+            <input id="filter-fat2" type="radio" name="fat" value="до 10%" checked>
+            <label for="filter-fat2">до 10%</label>
+            <input id="filter-fat3" type="radio" name="fat" value="до 30%">
+            <label for="filter-fat3">до 30%</label>
+            <input id="filter-fat4" type="radio" name="fat" value="выше 30%">
+            <label for="filter-fat4">выше 30%</label>
           </fieldset>
-          <fieldset> 
+          <fieldset class="filter-flavors"> 
             <legend>Наполнители:</legend>
-            <label><input type="checkbox" name="stuff" value="шоколадные" checked>шоколадные</label>
-            <label><input type="checkbox" name="stuff" value="сахарные присыпки" checked>сахарные присыпки</label>
-            <label><input type="checkbox" name="stuff" value="фрукты">фрукты</label>
-            <label><input type="checkbox" name="stuff" value="сиропы">сиропы</label>
-            <label><input type="checkbox" name="stuff" value="джемы">джемы</label>
+            <input id="filter-flavors1" type="checkbox" name="stuff" value="шоколадные" checked>
+            <label for="filter-flavors1">шоколадные</label>
+            <input id="filter-flavors2" type="checkbox" name="stuff" value="сахарные присыпки" checked>
+            <label for="filter-flavors2">сахарные присыпки</label>
+            <input id="filter-flavors3" type="checkbox" name="stuff" value="фрукты">
+            <label for="filter-flavors3">фрукты</label>
+            <input id="filter-flavors4" type="checkbox" name="stuff" value="сиропы">
+            <label for="filter-flavors4">сиропы</label>
+            <input id="filter-flavors5" type="checkbox" name="stuff" value="джемы">
+            <label for="filter-flavors5">джемы</label>
           </fieldset>    
             <button type="submit" value="Применить">Применить</button>
         </form>

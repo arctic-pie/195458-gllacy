@@ -392,7 +392,7 @@ main {
     
 }
 .filter fieldset {
-    display: inline-block;
+    
 }
 .filter {
     width: 860px;
@@ -437,10 +437,6 @@ main {
 .catalog-image > img {
     display: block;
     width: 100%;
-}
-.pagination {
-/*  padding-top: 70px;
-    padding-bottom: 50px; */
 }
 .pagination li {
     display: inline-block;
@@ -544,6 +540,260 @@ main {
 }
 
 /* ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ */
+
+/* Фильтры */
+
+fieldset {
+    position: relative;
+    margin: 0;
+    padding: 7px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 30px;
+}
+fieldset legend {
+    position: absolute;
+    top: -22px;
+    left: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+.filter form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 110px
+}
+.filter-sort {
+    position: relative;
+    padding: 0;
+}
+.filter-sort::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #ffffff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+.filter-sort select {
+    padding: 9px 0;
+    padding-right: 32px;
+    padding-left: 15px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.filter-sort select::-ms-expand {
+    display: none;
+}
+.filter-sort option {
+    color: #323232;
+}
+.filter-sort:hover {
+    background-color: white;
+}
+.filter-sort:hover::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #323232;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+.filter-sort:hover select {
+    color: #323232;
+}
+.filter-price {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.range-controls {
+    position: relative;
+    width: 188px;
+    height: 22px;
+}
+.range-controls-scale {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.range-controls-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53%;
+    height: 4px;
+    margin-left: 10%;
+    background-color: #f8f7f4;
+}
+.range-controls-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #f8f7f4;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.range-controls-toggle-min {
+    left: 18px;
+}
+.range-controls-toggle-max {
+    left: 115px;
+}
+.filter-fat-content {
+    padding-right: 19px;
+    padding-left: 15px;
+}
+.filter-fat-content input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+.filter-fat-content label {
+    position: relative;
+    margin-right: 15px;
+    padding-left: 30px;
+    line-height: 22px;
+}
+.filter-fat-content label:hover {
+    cursor: pointer;
+}
+.filter-fat-content label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/filter-fat.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+.filter-fat-content label:last-child {
+    margin-right: 0;
+}
+.filter-fat-content label:hover::before {
+    background-image: url("../img/filter-fat-hover.png");
+}
+#filter-fat1:checked ~ label[for="filter-fat1"]::before,
+#filter-fat2:checked ~ label[for="filter-fat2"]::before,
+#filter-fat3:checked ~ label[for="filter-fat3"]::before,
+#filter-fat4:checked ~ label[for="filter-fat4"]::before {
+    background-image: url("../img/filter-fat-checked.png");
+}
+#filter-fat1:checked ~ label[for="filter-fat1"]:hover::before,
+#filter-fat2:checked ~ label[for="filter-fat2"]:hover::before,
+#filter-fat3:checked ~ label[for="filter-fat3"]:hover::before,
+#filter-fat4:checked ~ label[for="filter-fat4"]:hover::before {
+    background-image: url("../img/filter-fat-checked-hover.png");
+}
+input[type="radio"]:disabled ~ label {
+  color: rgba(255, 255, 255, 0.4);
+}
+input[type="radio"]:disabled ~ label::before {
+  background-image: url("../img/filter-fat-disabled.png");
+}
+input[type="radio"]:disabled ~ label:hover::before {
+  background-image: url("../img/filter-fat-checked-disabled.png");
+}
+.filter-flavors {
+    padding-right: 26px;
+    padding-left: 16px;
+}
+.filter-flavors input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+.filter-flavors label {
+    position: relative;
+    margin-right: 18px;
+    padding-left: 30px;
+    line-height: 22px;
+    text-transform: lowercase;
+}
+.filter-flavors label:hover {
+    cursor: pointer;
+}
+.filter-flavors label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/filter-flavors.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+.filter-flavors label:last-child {
+    margin-right: 0;
+}
+.filter-flavors label:hover::before {
+    background-image: url("../img/filter-flavors-hover.png");
+}
+#filter-flavors1:checked ~ label[for="filter-flavors1"]::before,
+#filter-flavors2:checked ~ label[for="filter-flavors2"]::before,
+#filter-flavors3:checked ~ label[for="filter-flavors3"]::before,
+#filter-flavors4:checked ~ label[for="filter-flavors4"]::before,
+#filter-flavors5:checked ~ label[for="filter-flavors5"]::before {
+  background-image: url("../img/filter-flavors-checked.png");
+}
+#filter-flavors1:checked ~ label[for="filter-flavors1"]:hover::before,
+#filter-flavors2:checked ~ label[for="filter-flavors2"]:hover::before,
+#filter-flavors3:checked ~ label[for="filter-flavors3"]:hover::before,
+#filter-flavors4:checked ~ label[for="filter-flavors4"]:hover::before,
+#filter-flavors5:checked ~ label[for="filter-flavors5"]:hover::before {
+  background-image: url("../img/filter-flavors-checked-hover.png");
+}
+input[type="checkbox"]:disabled ~ label {
+  color: rgba(255, 255, 255, 0.4);
+}
+input[type="checkbox"]:disabled ~ label::before {
+  background-image: url("../img/filter-flavors-disabled.png");
+}
+input[type="checkbox"]:disabled ~ label:hover::before {
+  background-image: url("../img/filter-flavors-checked-disabled.png");
+}
+.filter button[type="submit"] {
+    box-sizing: border-box;
+    width: 144px;
+    height: 37px;
+    padding: 7px 26px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 18px;
+    outline: none;
+}
+.filter button[type="submit"]:hover {
+    padding: 9px 28px;
+    color: #323232;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.filter button[type="submit"]:active {
+    padding: 9px 28px;
+    background-color: #eaeaea;
+    border: none;
+    box-shadow: inset 0 2px 1px 0 #696969;
+}
 
 /* Иконки */
 
@@ -921,6 +1171,13 @@ a:hover {
     color: #ffffff;
     text-decoration: none;
 }
+a:hover {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+a:active {
+    color: #ffbc9e;
+}
 .main-menu a {
     font-size: 16px;
     font-weight: 700;
@@ -1054,6 +1311,16 @@ a:hover {
 }
 .breadcrumbs a{
     border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.breadcrumbs-link::after {
+    content: "»";
+    margin: 0 8px;
+}
+.filter {
+    color: #ffffff; 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px; 
 }
 .catalog-item .item-description {
     color: #ffffff;
