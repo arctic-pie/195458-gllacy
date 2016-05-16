@@ -230,7 +230,7 @@
                             <form action="#" method="post">
                                 <label for="subscription">Электронная почта</label>
                                 <input type="email" name="email" placeholder="Электронная почта" id="subscription">
-                                <button class="btn" type="submit">Отправить</button>
+                                <a class="btn" href="/">Отправить</a>
                             </form>
                         </div>
                     </div>
@@ -248,18 +248,7 @@
                             <span class="bold-text">8 812 450-25-25</span><br>
                             <span class="text">(с 10 до 20 ежедневно)</span>
                         </p>
-                        <button class="btn btn-feetback" type="submit">Форма обратной связи</button>
-                    </div>
-                    <div class="feetback hover">
-                        <form action="#" method="post">
-                            <fieldset>
-                                <legend>Мы обязательно вам ответим!</legend>
-                                <input type="text" id="name" placeholder="Как вас зовут?" required>
-                                <input type="email" id="email" placeholder="Ваша почта для ответа?" required>
-                                <textarea name="comment" id="comment" rows="4" placeholder="Напишите что-нибудь..." required></textarea>
-                                <button class="btn" type="submit">Отправить</button>
-                            </fieldset>
-                        </form>
+                        <button class="btn " type="submit">Форма обратной связи</button>
                     </div>
                 </section>
             </main>
@@ -298,5 +287,19 @@
                 </div>
             </footer>
         </div>
+        <div class="feedback">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend class="feedback-title">Мы обязательно вам ответим!</legend>
+                    <input type="text" id="name" placeholder="Как вас зовут?" required>
+                    <input type="email" id="email" placeholder="Ваша почта для ответа?" required>
+                    <textarea name="comment" id="comment" rows="4" placeholder="Напишите что-нибудь..." required></textarea>
+                    <button class="btn" type="submit">Отправить</button>
+                </fieldset>
+            </form>
+            <button class="feedback-close"></button>
+        </div>
+        <div class="overlay"></div>
+        <script src="js/script.js" type="text/javascript"></script>
     </body>
 </html>
