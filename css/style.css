@@ -767,7 +767,6 @@ td.total {
     height: 130%;
     min-height: 340px;
     padding: 0 10px;
-    padding-bottom: 20px;
 
     text-align: center;
    
@@ -776,12 +775,12 @@ td.total {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4); 
 }
 .catalog-item .btn{
-    display: block;
+    display: inline-block;
+    vertical-align: bottom;
     height: 44px;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 20px;
-    vertical-align: top;
 }
 .catalog-container:first-child .catalog-image,
 .catalog-container:first-child .item-description {
@@ -1304,7 +1303,7 @@ li.heart::before {
 
 .btn {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
     padding: 10px 22px;
     background-color: #db4e33;
     background-image: -webkit-linear-gradient(top, #f16944, #c93926);
@@ -1789,17 +1788,21 @@ a:active {
 
 /* Popup */
 
-}
+
 .feedback {
-    display: none;
     position: fixed;
-    z-index: 200;
+    top: 50%;
+    bottom: 0;
+    left: 50%;
+    z-index: 151;
     box-sizing: border-box;
     width: 478px;
     height: 443px;
     margin-top: -221px;
     margin-left: -239px;
     padding: 17px 25px;
+    
+    display: none;
 
     background-color: #f8f7f4;
     border-radius: 13px;

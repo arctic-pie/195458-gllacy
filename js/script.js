@@ -3,7 +3,7 @@ var popup = document.querySelector(".feedback");
 var close = document.querySelector(".feedback-close");
 var overlay = document.querySelector(".overlay");
 
-link.addEventListener("click", function(event) {
+open.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.add("feedback-open");
   overlay.classList.add("overlay-open");
