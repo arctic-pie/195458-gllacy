@@ -774,13 +774,15 @@ td.total {
     background-color:  rgba(255, 255, 255, 0.3);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4); 
 }
-.catalog-item .btn{
-    display: inline-block;
+.catalog-item a.btn{
+    display: block;
     vertical-align: bottom;
+    box-sizing: border-box;
     height: 44px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-bottom: 20px;
+    padding-bottom: 0;
+    margin-bottom: 20px
 }
 .catalog-container:first-child .catalog-image,
 .catalog-container:first-child .item-description {
@@ -1156,6 +1158,19 @@ input[type="checkbox"]:disabled ~ label:hover::before {
     height: 20px;
 
     background: transparent url("../img/icon_basket-hover.svg") no-repeat;
+    background-position: 0 0 ;
+    opacity: 1;
+}
+.full-basket .user-block-btn-basket::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 20px;
+
+    background: transparent url("../img/icon_full-basket.png") no-repeat;
     background-position: 0 0 ;
     opacity: 1;
 }
