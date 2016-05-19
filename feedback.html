@@ -5,22 +5,29 @@
         <title>HTML Academy: Глейси</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style-min.css" rel="stylesheet">
     </head>
     <body>
-        <div class="feedback">
+        <div class="feedback feedback-page">
             <form action="#" method="post">
                 <fieldset>
                     <legend class="feedback-title">Мы обязательно вам ответим!</legend>
-                    <input type="text" id="name" placeholder="Как вас зовут?" required>
-                    <input type="email" id="email" placeholder="Ваша почта для ответа?" required>
-                    <textarea name="comment" id="comment" rows="4" placeholder="Напишите что-нибудь..." required></textarea>
-                    <button class="btn" type="submit">Отправить</button>
+                        <div class="label-positioner">
+                            <input type="text" id="feedback-name" placeholder="Как вас зовут?" required>
+                            <label for="feedback-name">Как вас зовут?</label>
+                        </div>
+                        <div class="label-positioner">
+                            <input type="email" id="feedback-email" placeholder="Ваша почта для ответа?" required>
+                            <label for="feedback-email">Ваша почта для ответа?</label>
+                        </div>
+                        <div class="label-positioner">
+                            <textarea name="comment" id="feedback-comment" rows="4" placeholder="Напишите что-нибудь..." required></textarea>
+                            <label for="feedback-comment">Напишите что-нибудь...</label>
+                        </div>
+                        <button class="btn" type="submit">Отправить</button>
                 </fieldset>
             </form>
-            <button class="feedback-close"></button>
+            <a class="feedback-close" href="index.html"></a>
         </div>
-        <div class="overlay"></div>
-        <script src="js/script.js" type="text/javascript"></script>
     </body>
 </html>

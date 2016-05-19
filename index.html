@@ -5,7 +5,7 @@
         <title>HTML Academy: Глейси</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic" rel="stylesheet" type="text/css">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style-min.css" rel="stylesheet">
     </head>
     <body>
         <input type="radio" name="slide" id="slide1" checked>
@@ -55,8 +55,10 @@
                             <div class="search-hover-fixer hover">
                                 <div class="search-hover hover">
                                     <form action="#" method="post">
-                                        <input id="search" type="search" name="search" placeholder="Что ищем?">
-                                        <label for="search" class="hover">Что ищем?</label>
+                                        <div class="label-positioner">
+                                            <input id="search" type="search" name="search" placeholder="Что ищем?">
+                                            <label for="search">Что ищем?</label>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -66,8 +68,14 @@
                             <div class="enter-hover-fixer hover">
                                 <div class="enter-hover hover">
                                     <form action="#" method="post">
-                                        <input type="email" name="email" placeholder="Электронная почта">
-                                        <input type="password" name="password" placeholder="Пароль">
+                                        <div class="label-positioner">
+                                            <input type="email" name="email" id="enter-email" placeholder="Электронная почта">
+                                            <label for="enter-email">Электронная почта</label>
+                                        </div>
+                                        <div class="label-positioner">
+                                            <input type="password" name="password" id="enter-password" placeholder="Пароль">
+                                            <label for="enter-password">Пароль</label>
+                                        </div>
                                         <button class="btn" type="submit">Войти</button>
                                         <div class="enter-hover-links">
                                             <a href="#">Забыли пароль?</a><br>
@@ -228,8 +236,10 @@
                         <div class="background-inner">
                             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                             <form action="#" method="post">
-                                <label for="subscription">Электронная почта</label>
-                                <input type="email" name="email" placeholder="Электронная почта" id="subscription">
+                                <div class="label-positioner">
+                                    <input type="email" name="email" placeholder="Электронная почта" id="subscription">
+                                    <label for="subscription">Электронная почта</label>
+                                </div>
                                 <a class="btn" href="/">Отправить</a>
                             </form>
                         </div>
@@ -291,15 +301,24 @@
                 <form action="#" method="post">
                     <fieldset>
                         <legend class="feedback-title">Мы обязательно вам ответим!</legend>
-                        <input type="text" id="name" placeholder="Как вас зовут?" required>
-                        <input type="email" id="email" placeholder="Ваша почта для ответа?" required>
-                        <textarea name="comment" id="comment" rows="4" placeholder="Напишите что-нибудь..." required></textarea>
+                        <div class="label-positioner">
+                            <input type="text" id="feedback-name" placeholder="Как вас зовут?" required>
+                            <label for="feedback-name">Как вас зовут?</label>
+                        </div>
+                        <div class="label-positioner">
+                            <input type="email" id="feedback-email" placeholder="Ваша почта для ответа?" required>
+                            <label for="feedback-email">Ваша почта для ответа?</label>
+                        </div>
+                        <div class="label-positioner">
+                            <textarea name="comment" id="feedback-comment" rows="4" placeholder="Напишите что-нибудь..." required></textarea>
+                            <label for="feedback-comment">Напишите что-нибудь...</label>
+                        </div>
                         <button class="btn" type="submit">Отправить</button>
                     </fieldset>
                 </form>
                 <button class="feedback-close"></button>
             </div>  
         <div class="overlay"></div>
-        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/script-min.js" type="text/javascript"></script>
     </body>
 </html>
